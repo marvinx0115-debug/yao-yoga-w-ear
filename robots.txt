@@ -1,0 +1,8 @@
+# robots.txt for Yao Yoga Wear
+# https://yaoyoga.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yaoyoga.com/sitemap.xml
