@@ -84,9 +84,60 @@ img { max-width: 100%; display: block; }
 .footer-col a:hover { color: #16a34a; }
 .footer-bottom { border-top: 1px solid #333; padding: 1rem 0; text-align: center; font-size: 0.85rem; color: #888; }
 
-/* WhatsApp Float */
-.wa-float { position: fixed; bottom: 24px; right: 24px; background: #25d366; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,.3); z-index: 999; transition: transform .2s; }
-.wa-float:hover { transform: scale(1.1); }
+/* WhatsApp Float - Right Center */
+.wa-float { position: fixed; top: 50%; right: 16px; transform: translateY(-50%); background: transparent; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; transition: transform .2s; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+.wa-float:hover { transform: translateY(-50%) scale(1.1); }
+.wa-float img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+@media (max-width: 600px) {
+  .wa-float { width: 52px; height: 52px; right: 12px; }
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .container { padding: 0 1rem; }
+  .header-inner { height: 56px; }
+  .logo { font-size: 1.1rem; }
+  .btn-sm { padding: .35rem .8rem; font-size: 0.8rem; }
+  .hero { padding: 3rem 0; }
+  .hero h1 { font-size: 1.75rem; line-height: 1.3; }
+  .hero-sub { font-size: 1rem; }
+  .hero-stats { gap: 1.5rem; }
+  .stat strong { font-size: 1.5rem; }
+  .section { padding: 2.5rem 0; }
+  .section-title { font-size: 1.5rem; }
+  .section-desc { font-size: 0.9rem; margin-bottom: 2rem; }
+  .card { padding: 1.5rem; }
+  .card h3 { font-size: 1rem; }
+  .card p { font-size: 0.85rem; }
+  .product-card { padding: 1rem; }
+  .product-img { height: 160px; }
+  .product-card h4 { font-size: 0.95rem; }
+  .btn-lg { padding: .7rem 1.5rem; font-size: 0.95rem; }
+  .footer { padding: 2rem 0 0; }
+  .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-col h4 { font-size: 0.95rem; }
+  .footer-col a { font-size: 0.85rem; }
+  .page-hero { padding: 2rem 0; }
+  .page-hero h1 { font-size: 1.5rem; }
+  .contact-form input, .contact-form textarea, .contact-form select { padding: .6rem; font-size: 0.9rem; }
+  .info-box { padding: 1rem; }
+  .process-steps { gap: 1rem; }
+  .step { padding: 1rem; }
+  .step-num { font-size: 1.5rem; }
+  .specs-table th, .specs-table td { padding: .5rem .75rem; font-size: 0.85rem; }
+  .price-tier { padding: .75rem; font-size: 0.85rem; }
+  .feature h4 { font-size: 0.95rem; }
+  .feature p { font-size: 0.85rem; }
+  .factory-gallery { grid-template-columns: 1fr; gap: .75rem; }
+  .factory-gallery img { height: 150px; }
+}
+
+/* Tablet Optimization */
+@media (max-width: 900px) and (min-width: 601px) {
+  .hero h1 { font-size: 2.5rem; }
+  .section { padding: 3rem 0; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
 
 /* Product Page */
 .page-hero { background: #f0fdf4; padding: 3rem 0; text-align: center; }
