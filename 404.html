@@ -6,6 +6,7 @@
   <title>404 — Page Not Found | Yao Yoga Wear</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preload" href="/js/i18n.js" as="script">
 </head>
 <body style="display:flex;flex-direction:column;min-height:100vh;">
 
@@ -13,9 +14,9 @@
   <div class="container header-inner">
     <a href="/" class="logo">Yao<span>Yoga</span>Wear</a>
     <nav class="nav" id="mainNav">
-      <a href="/">Home</a>
-      <a href="/products/">Products</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/products/" data-i18n="nav.products">Products</a>
+      <a href="/contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <button class="mobile-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
   </div>
@@ -43,5 +44,18 @@
   n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',c);});
 })();
 </script>
+
+<!-- Language Switcher -->
+<div class="lang-switcher" id="langSwitcher">
+  <button class="lang-toggle" onclick="document.getElementById('langSwitcher').classList.toggle('open')" data-i18n="lang.label">EN</button>
+  <div class="lang-options">
+    <button class="lang-btn" data-lang="en" onclick="window.setLang('en');document.getElementById('langSwitcher').classList.remove('open')">EN</button>
+    <button class="lang-btn" data-lang="es" onclick="window.setLang('es');document.getElementById('langSwitcher').classList.remove('open')">ES</button>
+    <button class="lang-btn" data-lang="pt" onclick="window.setLang('pt');document.getElementById('langSwitcher').classList.remove('open')">PT</button>
+  </div>
+</div>
+
+<!-- i18n -->
+<script src="/js/i18n.js"></script>
 </body>
 </html>
