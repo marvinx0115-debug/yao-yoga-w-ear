@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿/* ===== Yao Yoga Wear — Global Styles ===== */
+=======
+/* ===== Yao Yoga Wear — Global Styles ===== */
+>>>>>>> 1354bbbcedaad6e5185b443e4e23e6e4d3b72168
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.6; }
@@ -84,6 +88,7 @@ img { max-width: 100%; display: block; }
 .footer-col a:hover { color: #16a34a; }
 .footer-bottom { border-top: 1px solid #333; padding: 1rem 0; text-align: center; font-size: 0.85rem; color: #888; }
 
+<<<<<<< HEAD
 /* WhatsApp Float Button - Right Center */
 .wa-float {
   position: fixed;
@@ -123,6 +128,14 @@ img { max-width: 100%; display: block; }
 @media (max-width: 600px) {
   .wa-float { width: 54px; height: 54px; right: 16px; }
   .wa-float svg, .wa-float img { width: 32px; height: 32px; }
+=======
+/* WhatsApp Float - Right Center */
+.wa-float { position: fixed; top: 50%; right: 16px; transform: translateY(-50%); background: transparent; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 999; transition: transform .2s; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+.wa-float:hover { transform: translateY(-50%) scale(1.1); }
+.wa-float img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+@media (max-width: 600px) {
+  .wa-float { width: 52px; height: 52px; right: 12px; }
+>>>>>>> 1354bbbcedaad6e5185b443e4e23e6e4d3b72168
 }
 
 /* Mobile Optimization */

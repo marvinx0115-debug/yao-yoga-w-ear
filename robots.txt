@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿# robots.txt for Yao Yoga Wear
+=======
+# robots.txt for Yao Yoga Wear
+>>>>>>> 1354bbbcedaad6e5185b443e4e23e6e4d3b72168
 # https://yaoyoga.com
 
 User-agent: *
