@@ -1,43 +1,47 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W7PPB2CG');</script>
-<!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found 鈥?Yao Yoga Wear</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>404 — Page Not Found | Yao Yoga Wear</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7PPB2CG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body style="display:flex;flex-direction:column;min-height:100vh;">
+
 <header class="header">
   <div class="container header-inner">
     <a href="/" class="logo">Yao<span>Yoga</span>Wear</a>
     <nav class="nav" id="mainNav">
       <a href="/">Home</a>
       <a href="/products/">Products</a>
-      <a href="/custom-manufacturing.html">Custom</a>
-      <a href="/factory.html">Factory</a>
       <a href="/contact.html">Contact</a>
     </nav>
-    <button class="mobile-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')">鈽?/button>
+    <button class="mobile-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
   </div>
 </header>
-<section class="section" style="text-align:center;padding:6rem 0;">
-  <h1 style="font-size:3rem;color:#1a1a2e;">404</h1>
-  <p style="color:#666;margin-bottom:2rem;">Page not found. The page you're looking for doesn't exist or has been moved.</p>
-  <a href="/" class="btn btn-primary btn-lg">Go to Homepage</a>
-</section>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;">
+  <div>
+    <h1 style="font-size:4rem;color:#16a34a;margin-bottom:.5rem;">404</h1>
+    <p style="font-size:1.25rem;margin-bottom:2rem;color:#555;">Page not found. Let's get you back on track.</p>
+    <a href="/" class="btn btn-primary btn-lg">Go to Homepage</a>
+  </div>
+</main>
+
 <footer class="footer">
   <div class="footer-bottom"><div class="container"><p>&copy; 2026 Yao Yoga Wear</p></div></div>
 </footer>
+
+<script>
+(function(){
+  var t=document.getElementById('navToggle'),n=document.getElementById('mainNav'),o=document.getElementById('navOverlay');
+  function c(){n.classList.remove('open');o.classList.remove('open');t.textContent='☰';}
+  t.addEventListener('click',function(){var op=n.classList.toggle('open');o.classList.toggle('open',op);t.textContent=op?'✕':'☰';});
+  o.addEventListener('click',c);
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',c);});
+})();
+</script>
 </body>
 </html>
